@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,
+body {
+    height: 100%;
+    width:100%;
+}
+
+body {
+    z-index: -1;
+}
+
+#videoBackground{
+    position:absolute;
+    right: 0;
+    bottom: 0;
+    transform: scale(1);
+}
+
+.luckiest-guy-regular {
+    font-family: "Luckiest Guy", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#maze{
+    display: none;
+}
+
+#kanvas{
+    width: 700px;
+    background-image: url("../assets/sigma1.svg");
+    background-size:cover;
+    z-index: 999;
+}
+
+.glavni{
+    height:100%;
+    width:100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.solveBtn{
+    --b: 10px; /* adjust to control the border  */
+    height: 100px; /* adjust to control the size  */
+    aspect-ratio: cos(30deg);
+    clip-path: 
+    polygon(50% 0,-50% 50%,50% 100%,150% 50%,50% 0,
+    50% var(--b),
+    calc(100% - var(--b)*sin(60deg)) calc(25% + var(--b)*cos(60deg)),
+    calc(100% - var(--b)*sin(60deg)) calc(75% - var(--b)*cos(60deg)),
+    50% calc(100% - var(--b)),
+    calc(var(--b)*sin(60deg)) calc(75% - var(--b)*cos(60deg)),
+    calc(var(--b)*sin(60deg)) calc(25% + var(--b)*cos(60deg)),
+    50% var(--b));
+    background-color:#6E4A0C;
+    margin-right: 20px;
+    border-radius: 30px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display:flex;
+    cursor: pointer;
+    font-family: "Luckiest Guy", serif;
+    position: relative;
+    z-index: 2;
+    scale: 1.1;
+}
+
+.solveBtn:hover{
+    scale: 1.05;
+}
+
+.solveBtn1{
+    height: 100px; /* adjust to control the size  */
+    aspect-ratio: cos(30deg);
+    clip-path: polygon(-50% 50%,50% 100%,150% 50%,50% 0);
+    background-color:#f4dc04;
+    border-radius: 30px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display:flex;
+    cursor: pointer;
+    font-family: "Luckiest Guy", serif;
+    color: #7fa70e;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1; /* Ensure it covers the button */
+}
+
+.solveBtn1:hover{
+    scale: 1.05;
+}
+
+.clearBtn{
+    --b: 10px; /* adjust to control the border  */
+    height: 100px; /* adjust to control the size  */
+    aspect-ratio: cos(30deg);
+    clip-path: 
+    polygon(50% 0,-50% 50%,50% 100%,150% 50%,50% 0,
+    50% var(--b),
+    calc(100% - var(--b)*sin(60deg)) calc(25% + var(--b)*cos(60deg)),
+    calc(100% - var(--b)*sin(60deg)) calc(75% - var(--b)*cos(60deg)),
+    50% calc(100% - var(--b)),
+    calc(var(--b)*sin(60deg)) calc(75% - var(--b)*cos(60deg)),
+    calc(var(--b)*sin(60deg)) calc(25% + var(--b)*cos(60deg)),
+    50% var(--b));
+    background-color:#6E4A0C;
+    margin-right: -86.5px;
+    border-radius: 30px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display:flex;
+    cursor: pointer;
+    font-family: "Luckiest Guy", serif;
+    position: relative;
+    z-index: 2;
+    scale: 1.1;
+}
+
+.clearBtn:hover{
+    scale: 1.05;
+}
+
+.clearBtn1{
+    height: 100px; /* adjust to control the size  */
+    aspect-ratio: cos(30deg);
+    clip-path: polygon(-50% 50%,50% 100%,150% 50%,50% 0);
+    background-color:#f4dc04;
+    border-radius: 30px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display:flex;
+    cursor: pointer;
+    font-family: "Luckiest Guy", serif;
+    color:#7fa70e;
+    top: 0;
+    left: 0;
+    z-index: 1; /* Ensure it covers the button */
+}
+
+.clearBtn1:hover{
+    scale: 1.05;
+}
+
+.prvi{
+    flex-direction: column;
+    display:flex;
+    position: relative;
+}
+
+.gumbi{
+    flex-direction: row;
+    display:flex;
+    position: absolute;
+    top: 50vh;
+    left: 36vh;
+}
+
+.med{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 37%;
+    right: 50%;
+    transform: translate(50%, 50%);
+    z-index: 1;
+}
+
+.med img {
+    width: 100%;
+    height: 100%;
+    scale: 0.7;
+}
+
+#sigma2{
+    position: absolute;
+    width: 700px;
+    height: 814px;
+}
+
+.logo{
+    position: absolute;
+    top: 10vh;
+    left: 29vh;
+}
