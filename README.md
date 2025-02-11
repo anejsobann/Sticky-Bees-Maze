@@ -1,3 +1,5 @@
+<h1>Sticke Bees Maze</h1>
+
 In this project, I created a webpage with interactive elements. The main structure includes a video background that plays on loop, buttons for "Solve" and "Reset" with interactive functions, and several graphic elements like images and animations.
 
 Specifically, I:
