@@ -14,4 +14,6 @@
 
 <h3>Preview:</h3>
 <br>
-![Posnetek zaslona 2025-02-11 082145](https://github.com/user-attachments/assets/4e71fc2f-d9b4-4612-98a6-a015cf8052d5)
+<img src="https://github.com/user-attachments/assets/c1faa742-8ff7-4913-ab40-42c15d603683">
+
+
