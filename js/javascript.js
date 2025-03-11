@@ -1,26 +1,6 @@
-document.addEventListener("DOMContentLoaded", function () {
-  canvas = document.querySelector("#kanvas");
-  ctx = canvas.getContext("2d");
-  currentPixel = 0;
-  speed = 5;
-  stopped = false;
-
-  // Initialize bee image
-  imgBee = new Image();
-  imgBee.src = "./assets/cebela.png"; // Replace with your actual bee image path
-
-  // Ensure the bee image is loaded before starting the animation
-  imgBee.onload = () => {
-    img = new Image(); // You should define and load the background image if needed
-
-    img.onload = () => {
-      solve(); // Start the animation after both images are loaded
-    };
-  };
-});
-
 let labirint;
 let canvas;
+let canvasOverlay;
 let ctx;
 let currentPixel;
 let speed;
@@ -28,6 +8,8 @@ let stopped;
 let pixels = [];
 let img;
 let imgBee;
+let positions;
+
 const solution = [
   [247, 2],
   [247, 15],
@@ -136,7 +118,12 @@ function solve() {
   function animate() {
     if (currentPixel < pixels.length && !stopped) {
       const [x, y] = pixels[currentPixel];
-
+      positions.forEach((pos) => {
+        if (pos[0] == x && pos[1] == y) {
+          console.log("JACKPOOTTTJJJJJ");
+          ctxOverlay.clearRect(pos[0] - 7.5, pos[1] - 7.5, 15, 15);
+        }
+      });
       // Clear previous position of the bee and redraw it at the new position
       ctx.clearRect(0, 0, canvas.width, canvas.height); // Clear canvas for smooth movement
       // Scale factor (10% of original size)
@@ -195,3 +182,52 @@ function getLinePixels(x1, y1, x2, y2) {
 
   return pixels;
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+  canvas = document.querySelector("#kanvas");
+  canvasOverlay = document.querySelector("#kanvasOverlay");
+  ctx = canvas.getContext("2d");
+  ctxOverlay = canvasOverlay.getContext("2d");
+
+  currentPixel = 0;
+  speed = 5;
+  stopped = false;
+
+  // Initialize bee image
+  imgBee = new Image();
+  imgBee.src = "./assets/cebela.png"; // Replace with your actual bee image path
+
+  // Ensure the bee image is loaded before starting the animation
+  function genPositions(num, solution) {
+    let rand = [];
+    for (let i = 0; i < num; i++) {
+      rand.push(solution[Math.floor(Math.random() * solution.length - 1) + 1]);
+    }
+    return rand;
+  }
+  positions = genPositions(15, solution);
+
+  function drawRect(x, y) {
+    let pot = new Image();
+    pot.src = "./assets/collectjar1.png";
+    pot.onload = () => {
+      ctxOverlay.drawImage(pot, x - 7.5, y - 7.5, 15, 15);
+    };
+  }
+
+  function drawPots(solution) {
+    for (let i = 0; i < solution.length; i++) {
+      drawRect(solution[i][0], solution[i][1]);
+    }
+  }
+
+  canvasOverlay.onload = drawPots(positions);
+
+  imgBee.onload = () => {
+    img = new Image(); // You should define and load the background image if needed
+
+    img.onload = () => {
+      solve(); // Start the animation after both images are loaded
+    };
+  };
+});

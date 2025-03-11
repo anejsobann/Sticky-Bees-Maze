@@ -37,6 +37,15 @@ video{
     z-index: 999;
 }
 
+#kanvasOverlay{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background-size:cover;
+    width: 700px;
+    z-index: 9999;
+}
+
 .glavni{
     height:100%;
     width:100%;
