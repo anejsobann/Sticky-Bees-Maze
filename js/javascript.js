@@ -123,9 +123,6 @@ function solve() {
   ctx.lineJoin = "round"; // Rounded joins between lines
   ctx.setLineDash([]); // No dashed lines, solid line only
 
-  /* stroke-linecap: round;
-     stroke-linejoin: round;*/
-
   pixels.length = 0;
   for (let i = 1; i < solution.length; i++) {
     const x1 = solution[i - 1][0];
@@ -143,7 +140,7 @@ function solve() {
       // Clear previous position of the bee and redraw it at the new position
       ctx.clearRect(0, 0, canvas.width, canvas.height); // Clear canvas for smooth movement
       // Scale factor (10% of original size)
-      const scaleFactor = 0.15;
+      const scaleFactor = 0.12; //bee size
       const beeWidth = imgBee.width * scaleFactor;
       const beeHeight = imgBee.height * scaleFactor;
 
