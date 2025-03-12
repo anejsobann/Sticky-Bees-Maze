@@ -172,7 +172,7 @@ video{
     flex-direction: row;
     display:flex;
     position: absolute;
-    bottom:300px;
+    bottom:310px;
     left: 60px;
 }
 
@@ -205,7 +205,6 @@ video{
 }
 
 .lab{
-    border: 2px solid white;
     display: flex;
     z-index: 20;
     justify-content: center;
@@ -216,4 +215,10 @@ video{
     width: 350px;
     height: 800px;
     position: relative;
+}
+
+.swall2-popup{
+    font-family: "Luckiest Guy", serif;
+    font-weight: 400;
+    font-style: normal;
 }

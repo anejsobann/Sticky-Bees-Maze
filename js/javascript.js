@@ -231,3 +231,12 @@ document.addEventListener("DOMContentLoaded", function () {
     };
   };
 });
+
+//sweet allert
+document.getElementById('logo').addEventListener('click', function() {
+  Swal.fire({
+      title: 'Credits',
+      text: 'Anej Soban,4. Ra',
+      confirmButtonText: 'OK'
+  });
+});
