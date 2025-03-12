@@ -172,8 +172,8 @@ video{
     flex-direction: row;
     display:flex;
     position: absolute;
-    top: 50vh;
-    left: 36vh;
+    bottom:300px;
+    left: 60px;
 }
 
 .med{
@@ -200,6 +200,20 @@ video{
 
 .logo{
     position: absolute;
-    top: 10vh;
-    left: 29vh;
+    top: 0vh;
+    left: 0vh;
+}
+
+.lab{
+    border: 2px solid white;
+    display: flex;
+    z-index: 20;
+    justify-content: center;
+    position: relative;
+}
+
+.levo{
+    width: 350px;
+    height: 800px;
+    position: relative;
 }
