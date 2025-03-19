@@ -8,8 +8,7 @@
   <li>Set up the HTML structure with all necessary links to styles and video files.</li>
   <li>Designed and positioned buttons with unique shapes and hover animations.</li>
   <li>Added a logo and video background for a more dynamic visual effect.</li>
-  <li>Styled the page using CSS for elements like buttons, logos, images, and backgrounds.</li>
-  <li>Built the layout using a flexible design to ensure proper display across different devices.</li>
+  <li>Styled the page using CSS for elements like buttons, logos, images, and lively background.</li>
 </ul>
 
 <h3>Preview:</h3>
